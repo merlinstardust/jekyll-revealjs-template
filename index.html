@@ -1,0 +1,101 @@
+---
+layout: reveal
+theme: black
+postReveal: |
+  <a style='position: absolute; top: 0; right: 0;' href='https://github.com/merlinpatt' target='_blank'>
+    <img border='0' src='https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png' alt='Fork me on GitHub' />
+  </a>
+---
+<style>
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  p code {
+    background-color: #3f3f3f;
+  }
+</style>
+
+<section>
+  <h1>
+    <a href="https://jekyllrb.com/">Jekyll</a> <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> Template
+  </h1>
+  <h3>
+    + Slides Collection
+  </h3>
+</section>
+
+<section>
+  <div class='row'>
+    <div class='column'>
+      <iframe src='{{site.slides[0].url}}'></iframe>
+    </div>
+  </div>
+
+  <p>
+    Using a <a href="https://jekyllrb.com/">Jekyll</a> layout, <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> presentations only need slides defined by the <code>&lt;section></code> tag. No more messing around with the head and script configs.
+  </p>
+
+  <pre>
+    <code data-trim>
+      &lt;section>
+        <h1>
+          Example
+        </h1>
+      &lt;/section>
+
+      &lt;section>
+        <h1>
+          Slide 2
+        </h1>
+      &lt;/section>
+    </code>
+  </pre>
+</section>
+
+<section>
+  <div class='row'>
+    {% for slide in site.slides %}
+      <iframe src='{{slide.url}}'></iframe>
+    {% endfor %}
+  </div>
+
+  <p>
+    Presentations are stored in a special <code>_slides</code> which can be looped over with a <code>site.slides</code> variable. This is defined in <code>_config.yml</code>
+  </p>
+
+  <pre>
+    <code data-trim>
+      <div class='row'>
+        {% raw %}{% for slide in site.slides %}{% endraw %}
+          <iframe src='{% raw %}{{slide.url}}{% endraw %}'></iframe>
+        {% raw %}{% endfor %}{% endraw %}
+      </div>
+    </code>
+  </pre>
+</section>
+
+<section>
+  <div class='row'>
+    <iframe src='{{site.slides[1].url}}'></iframe>
+  </div>
+
+  <p>
+    Themes can be overridden with <a href="https://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a> or change the default in <code>_config.yml</code>
+  </p>
+
+  <pre>
+    <code data-trim>
+      ---
+      theme: white
+      ---
+
+      &lt;section>
+        <h1>
+          Example 2 - Overridden Theme
+        </h1>
+      &lt;/section>
+    </code>
+  </pre>
+</section>

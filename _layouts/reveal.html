@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+    <title>
+      {% if page.title %}
+        {{ page.title }} - {{ site.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+
+    <link rel='stylesheet' href='/css/reveal/reveal.css'>
+    <link rel='stylesheet' href='/css/reveal/theme/{{ page.theme }}.css'>
+    <link rel='stylesheet' href='/css/reveal/highlight.css'>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '/css/reveal/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    {{ page.postReveal }}
+
+    <div class='reveal'>
+      <div class='slides'>
+
+        {{ content }}
+
+      </div> <!-- /.slides -->
+    </div> <!-- /.reveal -->
+
+    {{ page.postReveal }}
+
+    <script src='/slides/reveal/lib/js/head.min.js'></script>
+    <script src='/slides/reveal/js/reveal.js'></script>
+    <script src='/slides/reveal/js/revealConfig.js'></script>
+  </body>
+</html>

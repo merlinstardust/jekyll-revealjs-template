@@ -1,0 +1,17 @@
+title: Jekyll reveal.js Template + Slides Collection
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+collections:
+  slides:
+    output: true
+
+defaults:
+  -
+    scope:
+      type: 'slides'
+    values:
+      layout: 'reveal'
+      theme: 'black'
