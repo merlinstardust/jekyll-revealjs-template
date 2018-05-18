@@ -19,7 +19,9 @@ postReveal: |
 
 <section>
   <h1>
-    <a href="https://jekyllrb.com/">Jekyll</a> <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> Template
+    <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>
+    <a href='https://github.com/hakimel/reveal.js/' target='_blank'>reveal.js</a>
+    Template
   </h1>
   <h3>
     + Slides Collection
@@ -34,7 +36,13 @@ postReveal: |
   </div>
 
   <p>
-    Using a <a href="https://jekyllrb.com/">Jekyll</a> layout, <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> presentations only need slides defined by the <code>&lt;section></code> tag. No more messing around with the head and script configs.
+    Using a
+    <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>
+    layout,
+    <a href='https://github.com/hakimel/reveal.js/' target='_blank'>reveal.js</a>
+    presentations only need slides defined by the
+    <code>&lt;section></code>
+    tag. No more messing around with the head and script configs.
   </p>
 
   <pre>
@@ -62,11 +70,16 @@ postReveal: |
   </div>
 
   <p>
-    Presentations are stored in a special <code>_slides</code> which can be looped over with a <code>site.slides</code> variable. This is defined in <code>_config.yml</code>
+    Presentations are stored in a special
+    <code>_slides</code>
+    which can be looped over with a
+    <code>site.slides</code>
+    variable. This is defined in
+    <code>_config.yml</code>
   </p>
 
   <pre>
-    <code data-trim>
+    <code data-trim class='html'>
       <div class='row'>
         {% raw %}{% for slide in site.slides %}{% endraw %}
           <iframe src='{% raw %}{{slide.url}}{% endraw %}'></iframe>
@@ -82,11 +95,14 @@ postReveal: |
   </div>
 
   <p>
-    Themes can be overridden with <a href="https://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a> or change the default in <code>_config.yml</code>
+    Themes can be overridden with
+    <a href='https://jekyllrb.com/docs/frontmatter/' target='_blank'>YAML Front Matter</a>
+    or change the default in
+    <code>_config.yml</code>
   </p>
 
   <pre>
-    <code data-trim>
+    <code data-trim class='html'>
       ---
       theme: white
       ---

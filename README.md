@@ -1,6 +1,8 @@
 # Jekyll reveal.js Template + Slides Collection
 
-A simple [Jekyll](https://jekyllrb.com/) template for easily and quickly making [reveal.js](https://github.com/hakimel/reveal.js/) presentations.
+A simple <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a> template for easily and quickly making <a href='https://github.com/hakimel/reveal.js/' target='_blank'>reveal.js</a> presentations.
+
+## <a href='https://jekyll-revealjs-template.github.io/' target='_blank'>See the demo</a>
 
 ## Jekyll Layout
 
